@@ -85,6 +85,26 @@
       input[type="number"]:focus {
         border: 1px solid var(--secondary-text);
       }
+      header{
+        width: 100%;
+      }
+      nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: var(--grey-base);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+      }
+      nav a{
+        text-decoration: none;
+        color: var(--secondary-text);
+        font-weight: 700;
+      }
       main {
         width: 100%;
         display: flex;
@@ -201,7 +221,9 @@
   </head>
   <body>
     <header>
-      <nav></nav>
+      <nav>
+        <a href="https://gramurja.netlify.app" target=”_blank”>Main Page</a>
+      </nav>
     </header>
     <main>
       <h1>Landing Page</h1>
@@ -226,7 +248,7 @@
         </section>
         <!-- -------NUMBERS-------- -->
         <section class="number-cont sub-cont">
-            <div class="sub-info">
+          <div class="sub-info">
                 <h3 class="sub-titles">Numbers</h3>
                 <p class="sub-des">If left empty then the numbers will be not updated, and will still remain the same as before.</p>
             </div>
@@ -238,8 +260,9 @@
             <input type="number" id="five" placeholder="Five" />
             <input type="number" id="six" placeholder="Six" />
           </div>
-            <button class="upload-no">Upload Numbers</button>
+          <button class="upload-no">Upload Numbers</button>
         </section>
+        <!-- -------ABOUT-------- -->
         <section class="about-cont sub-cont">
             <div class="sub-info">
                 <h3 class="sub-titles">About</h3>
