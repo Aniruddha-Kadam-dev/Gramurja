@@ -350,6 +350,11 @@ main {
   gap: var(--section-gap);
   text-align: left;
 }
+.footer-title{
+  background: var(--primary-linear);
+  color: transparent;
+  background-clip: text;
+}
 .adds{
   background: var(--secondary-linear);
   color: transparent;
