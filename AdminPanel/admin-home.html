@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GramUrja - Admin Panel</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+      :root {
+        --primary-linear: linear-gradient(to right, #660000, #cc3200);
+        --secondary-linear: linear-gradient(to right, #8b8b8b, #aeaeae);
+
+        --base: #ffffff;
+        --grey-base: #f6f6f6;
+        --separator: #d9d9d9;
+        --primary-text: #888888;
+        --secondary-text: #cc3200;
+        --text-accent1: #0088ff;
+        --text-accent2: #00b960;
+        --text-accent3: #ffca28;
+
+        --inter-font: "Inter", sans-serif;
+        --title-size: 2.488rem;
+        --sub-title-size: 1.728rem;
+        --content-size: 1.25rem;
+        --base-size: 1rem;
+        --sub-size: 0.833rem;
+        --text-center: center;
+
+        --side-m-pad: 10vw; /*mobile*/
+        --side-d-pad: 100px; /*desktop*/
+        --section-pad: 40px;
+        --button-pad: 10px 15px;
+        --section-gap: 30px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+        -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+      }
+      body {
+        width: 100%;
+        font-family: "Inter", sans-serif;
+      }
+      h1 {
+        background: var(--primary-linear);
+        background-clip: text;
+        color: transparent;
+      }
+      button {
+        padding: 10px 20px;
+        background: var(--base);
+        color: var(--secondary-text);
+        font-weight: 700;
+        outline: 1px solid var(--separator);
+        border: none;
+        border-radius: 999px;
+        cursor: pointer;
+    }
+    button:focus{
+        background: transparent;
+        /* outline: 2px solid var(--separator); */
+    }
+    input[type="text"],
+    input[type="number"] {
+        padding: 10px 20px;
+        background: var(--base);
+        color: var(--secondary-text);
+        font-weight: 700;
+        letter-spacing: 2px;
+        border: 1px solid var(--separator);
+        outline: none;
+        border-radius: 10px;
+    }
+    input[type="text"]::placeholder,
+    input[type="number"]::placeholder {
+        letter-spacing: 0;
+        font-weight: 400;
+      }
+      input[type="text"]:focus,
+      input[type="number"]:focus {
+        border: 1px solid var(--secondary-text);
+      }
+      main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: var(--side-d-pad);
+        gap: var(--section-gap);
+        text-align: center;
+      }
+      .main-cont {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--section-gap);
+      }
+      .sub-cont {
+        width: 100%;
+        background: var(--grey-base);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 40px;
+        border-radius: 10px;
+        gap: var(--section-gap);
+      }
+      .sub-info{
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .sub-titles {
+          color: var(--primary-text);
+          font-size: var(--content-size);
+        }
+        .sub-des {
+        background: var(--secondary-linear);
+        background-clip: text;
+        color: transparent;
+        font-size: var(--base-size);
+      }
+
+      .preview-cont {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .previews {
+        padding: 0;
+        width: 200px;
+        height: 150px;
+        border-radius: 10px;
+      }
+
+      .sub-ctas{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .add-img, .add-no{
+        color: var(--text-accent2);
+      }
+      .remove-img, .remove-no{
+        color: var(--text-accent3);
+      }
+
+      .input-cont {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* -------MEDIA QUERIES (SUPER-MOBILE)--------- */
+      @media (width < 450px) {
+
+          .sub-cont{
+            padding: 20px;
+          }
+
+          input[type="text"],
+          input[type="number"] {
+              width: 70%;
+            }
+        }
+        
+        /* -------MEDIA QUERIES (MOBLIE)--------- */
+        @media (width < 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            main {
+                padding: var(--section-pad) var(--side-m-pad);
+            }
+            .previews{
+                width: 45%;
+                height: 100px;
+            }
+        }
+        </style>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+    <main>
+      <h1>Landing Page</h1>
+      <article class="main-cont">
+        <!-- -------CAROUSEL-------- -->
+        <section class="carousel-cont sub-cont">
+            <div class="sub-info">
+                <h3 class="sub-titles">Carousel</h3>
+                <p class="sub-des">Should add atleast 4 images for the carousel to work properly.</p>
+            </div>
+            <div class="preview-cont">
+                <button class="previews preview-car"></button>
+                <button class="previews preview-car"></button>
+                <button class="previews preview-car"></button>
+                <button class="previews preview-car"></button>
+            </div>
+            <div class="sub-ctas">
+                <button class="add-img">+ Add</button>
+                <button class="remove-img">- Remove</button>
+                <button class="upload-img">Upload Image</button>
+            </div>
+        </section>
+        <!-- -------NUMBERS-------- -->
+        <section class="number-cont sub-cont">
+            <div class="sub-info">
+                <h3 class="sub-titles">Numbers</h3>
+                <p class="sub-des">If left empty then the numbers will be not updated, and will still remain the same as before.</p>
+            </div>
+          <div class="input-cont">
+            <input type="number" id="one" placeholder="One" />
+            <input type="number" id="two" placeholder="Two" />
+            <input type="number" id="three" placeholder="Three" />
+            <input type="number" id="four" placeholder="Four" />
+            <input type="number" id="five" placeholder="Five" />
+            <input type="number" id="six" placeholder="Six" />
+          </div>
+            <button class="upload-no">Upload Numbers</button>
+        </section>
+        <section class="about-cont sub-cont">
+            <div class="sub-info">
+                <h3 class="sub-titles">About</h3>
+                <p class="sub-des">All of the 3 images should be added for previewing it in the landing page.</p>
+            </div>
+            <div class="preview-cont">
+                <button class="previews preview-about"></button>
+                <button class="previews preview-about"></button>
+                <button class="previews preview-about"></button>
+            </div>
+            <button class="upload-img">Upload Image</button>
+        </section>
+        </section>
+        <section class="work-cont sub-cont">
+            <div class="sub-info">
+                <h3 class="sub-titles">Work</h3>
+                <p class="sub-des">All of the 3 images should be added for previewing it in the landing page.</p>
+            </div>
+          <div class="preview-cont">
+            <button class="previews preview-work"></button>
+            <button class="previews preview-work"></button>
+            <button class="previews preview-work"></button>
+          </div>
+            <button class="upload-img">Upload Image</button>
+        </section>
+        <section class="partners-cont sub-cont">
+            <div class="sub-info">
+                <h3 class="sub-titles">Partners</h3>
+                <p class="sub-des">Should add atleast 4 images for the infinite scroll animation to work properly.</p>
+            </div>
+          <div class="preview-cont">
+            <button class="previews preview-part"></button>
+            <button class="previews preview-part"></button>
+            <button class="previews preview-part"></button>
+            <button class="previews preview-part"></button>
+          </div>
+          <div class="sub-ctas">
+            <button class="add-img">+ Add</button>
+            <button class="remove-img">- Remove</button>
+            <button class="upload-img">Upload Image</button>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
