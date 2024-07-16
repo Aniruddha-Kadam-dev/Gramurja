@@ -220,7 +220,7 @@ footer {
   padding-bottom: 20px;
   display: none;
   /* display: grid; */
-  gap: 40px;
+  /* gap: 40px; */
   grid-template-columns: auto 60%;
 }
 
@@ -234,6 +234,7 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  margin: 40px 0;
 }
 .img-cont {
   width: 45%;
