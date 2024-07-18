@@ -164,13 +164,28 @@ footer {
 .p-block {
   position: relative;
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 15px;
   display: grid;
   gap: 10px;
   cursor: pointer;
   overflow: hidden;
 }
 
+.drop-down-p {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  padding-top: 2px;
+}
+.drop-down-p1{
+  fill: var(--text-accent1);
+}
+.drop-down-p2{
+  fill: var(--text-accent2);
+}
+.drop-down-p3{
+  fill: var(--text-accent3);
+}
 .p1-title {
   color: var(--text-accent1);
 }
@@ -216,8 +231,8 @@ footer {
 }
 /* ------NORMAL (remove display grid)-------- */
 .p-content {
-  padding: 0 20px;
-  padding-bottom: 20px;
+  padding: 0 15px;
+  padding-bottom: 15px;
   display: none;
   /* display: grid; */
   /* gap: 40px; */
@@ -247,7 +262,8 @@ footer {
   box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.1);
   padding: 5px;
 }
-.p-img1-cont, .p-img4-cont {
+.p-img1-cont,
+.p-img4-cont {
   transform: rotate(6deg);
 }
 .p-img2-cont {
@@ -282,8 +298,79 @@ footer {
 }
 /* -----ACCORDION ACTIONS END HERE------- */
 
+.project-cont {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+.project-title {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin-top: 20px;
+}
+.proj {
+  width: 100%;
+  background: var(--grey-base);
+  /* border: 1px solid var(--separator); */
+  border-radius: 10px;
+}
+.proj-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.proj-title {
+  color: var(--primary-text);
+  font-size: var(--base-size);
+  font-weight: 400;
+  font-weight: 500;
+  text-wrap: balance;
+}
+.drop-down-proj {
+  max-width: 10px;
+  margin-top: 4px;
+  fill: var(--primary-text);
+}
+/* ----------NORMAL (remove display flex)-------------- */
+.proj-content {
+  width: 100%;
+  padding: 0 15px;
+  padding-bottom: 15px;
+  display: none;
+  /* display: flex; */
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+.proj-content-img {
+  width: 50%;
+  height: 30vh;
+  float: right;
+  border: 1px solid var(--separator);
+}
+.proj-des {
+  max-width: 50%;
+}
 
+/* -----PROJECT ACCORDION ACTIONS------- */
+.proj.open {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.proj.open .proj-content {
+  display: flex;
+}
 
+/* -----PROJECT ACCORDION ACTIONS END HERE------- */
 
 /* ------FOOTER------- */
 footer {
@@ -380,11 +467,11 @@ footer {
   .hero-section {
     padding: 0 var(--side-m-pad);
   }
-  
+
   .p-des {
     max-width: 100%;
   }
-  .p-dummy{
+  .p-dummy {
     max-width: 200px;
     top: 80%;
   }
@@ -397,22 +484,40 @@ footer {
   .p-dummy:nth-child(3) {
     transform: translate(25vw, 5px) rotate(10deg);
   }
-  
-  .p-content{
+
+  .p-content {
     grid-template-columns: auto;
     grid-template-rows: repeat(3, auto);
   }
-  .p-frame-cont{
+  .p-frame-cont {
     grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column-end: -1;
     grid-row-start: 2;
     grid-row-end: 3;
   }
   .img-cont {
     width: 100%;
   }
-  
-  
+
+  .project-cont {
+    grid-template-columns: minmax(100px, 1fr);
+  }
+  .proj-title {
+    max-width: 350px;
+  }
+
+  .proj-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .proj-content-img {
+    width: 100%;
+    margin: 0;
+  }
+  .proj-des {
+    max-width: none;
+  }
+
   .sections,
   footer {
     padding: var(--section-pad) var(--side-m-pad);
@@ -428,7 +533,7 @@ footer {
   .p-des {
     max-width: 100%;
   }
-  .p-dummy{
+  .p-dummy {
     max-width: 200px;
     top: 80%;
   }
@@ -441,14 +546,24 @@ footer {
   .p-dummy:nth-child(3) {
     transform: translate(25vw, 5px) rotate(10deg);
   }
-  .p-content{
+  .p-content {
     grid-template-columns: auto;
     grid-template-rows: repeat(3, auto);
   }
-  .p-frame-cont{
+  .p-frame-cont {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 2;
     grid-row-end: 3;
+  }
+
+  .proj.open .proj-content {
+    display: block;
+  }
+  .proj-content-img {
+    margin: 0 10px;
+  }
+  .proj-des {
+    max-width: none;
   }
 }
