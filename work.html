@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GramUrja - Work</title>
     <link rel="stylesheet" href="./work.css" />
+    <!-- ------SCROLLREVEAL-JS-PLUGINS------ -->
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <header>
@@ -928,20 +930,29 @@
         </section>
       </article>
     </footer>
-    <!-- ------GSAP-PLUGINS------ -->
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script>
       ScrollReveal({
-        distance: '30px',
+        distance: "30px",
         duration: 1500,
-        delay: 400
+        delay: 400,
       });
-      ScrollReveal().reveal(".hero-title", {delay: 0, origin: 'left'})
-      ScrollReveal().reveal(".hero-des", {delay: 0, origin: 'bottom'})
-      ScrollReveal().reveal(".program-title, .footer-title", {delay: 300, origin: 'left'})
-      ScrollReveal().reveal(".ps", {delay: 300, origin: 'bottom'})
-      ScrollReveal().reveal(".p-dummy", {delay: 0, origin: 'bottom', interval: 200})
-      ScrollReveal().reveal(".ads, .page-links, .foundation-links", {delay: 0, origin: 'bottom', interval: 50})
+      ScrollReveal().reveal(".hero-title", { delay: 0, origin: "left" });
+      ScrollReveal().reveal(".hero-des", { delay: 0, origin: "bottom" });
+      ScrollReveal().reveal(".program-title, .footer-title", {
+        delay: 300,
+        origin: "left",
+      });
+      ScrollReveal().reveal(".ps", { delay: 300, origin: "bottom" });
+      ScrollReveal().reveal(".p-dummy", {
+        delay: 0,
+        origin: "bottom",
+        interval: 200,
+      });
+      ScrollReveal().reveal(".ads, .page-links, .foundation-links", {
+        delay: 0,
+        origin: "bottom",
+        interval: 50,
+      });
     </script>
     <script src="./work.js"></script>
   </body>
