@@ -11,8 +11,6 @@ This project is a complete revamp of the website, designed with modern web techn
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## About GramUrja
 GramUrja is an NGO that works towards empowering rural communities by implementing sustainable energy solutions, educational programs, and improving healthcare infrastructure. The organization focuses on improving the quality of life in rural areas and promoting sustainable practices for long-term development.
